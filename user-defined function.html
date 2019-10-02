@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<!-- COMP519 js06.html 8.09.2005 -->
+<head>
+	<title>Prime Tester</title>
+	<script type="text/javascript">
+		function isPrime(n)
+		{
+if (n < 2) {
+return false;
+}
+else if (n == 2) {
+return true;
+}
+else {
+for (var i = 2; i <= Math.sqrt(n); i++) {
+if (n % i == 0) {
+return false;
+} }
+return true;
+} } 
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		testNum = parseFloat(prompt("Enter a positive interger", "7"));
+		if (isPrime(testNum)) {
+			document.write(testNum + "<b>is</b> a prime number.");
+		}
+		else {
+			document.write(testNum + "<b>is not</b> a prime number.");
+		}
+	</script>
+</body>
+</html>
